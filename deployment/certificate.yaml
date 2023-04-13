@@ -1,4 +1,4 @@
-# SSL certificate for barcos.co
+# SSL certificate for api.hblabs.co
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:

@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: apihblabsco
+  name: hblabsco-express
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: apihblabsco
+      app: hblabsco-express
   template:
     metadata:
       labels:
-        app: apihblabsco
+        app: hblabsco-express
     spec:
       affinity:
         nodeAffinity:
@@ -23,7 +23,7 @@ spec:
                       - k3sco3
 
       containers:
-        - name: apihblabsco
+        - name: hblabsco-express
           image: registry.gitlab.com/hblabs.co/cma/express:latest
           imagePullPolicy: Always
           ports:
@@ -55,10 +55,10 @@ spec:
                   name: mongodb-secret
                   key: dbpassword
           volumeMounts:
-            - name: apihblabsco-uploads-vol
+            - name: hblabsco-express-uploads-vol
               mountPath: /app/uploads/photos
       volumes:
-        - name: apihblabsco-uploads-vol
+        - name: hblabsco-express-uploads-vol
           hostPath:
             path: /home/ubuntu/api.hblabs.co/uploads/photos
       imagePullSecrets:
@@ -69,10 +69,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: apihblabsco-service
+  name: apih-blabsco-service
 spec:
   selector:
-    app: apihblabsco
+    app: hblabsco-express
   ports:
     - name: http
       protocol: TCP
@@ -84,7 +84,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: apihblabsco-ingress-prod
+  name: hblabsco-express-ingress-prod
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-production"
 spec:
@@ -100,6 +100,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: apihblabsco-service
+                name: hblabsco-express-service
                 port:
                   name: http

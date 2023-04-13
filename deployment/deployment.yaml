@@ -27,7 +27,7 @@ spec:
           image: registry.gitlab.com/hblabs.co/cma/express:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 3000
+            - containerPort: 4000
           resources:
             limits:
               memory: 256Mi

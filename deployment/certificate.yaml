@@ -1,0 +1,26 @@
+# SSL certificate for barcos.co
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: api.hblabs.co
+  # Namespace must be the same as the service
+  # which will be use the certificate
+  namespace: default
+spec:
+  # name wich will be used to refer to this certificate from ingress
+  secretName: api.hblabs.co
+  privateKey:
+    rotationPolicy: Always
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  renewBefore: 240h
+  commonName: "api.hblabs.co"
+  # literalSubject: "C=CO,O=HB Labs SAS,CN=HB Labs SAS"
+  dnsNames:
+    - "api.hblabs.co"
+  subject:
+    organizations:
+      - HB Labs SAS
+    countries:
+      - CO

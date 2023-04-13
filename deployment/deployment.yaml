@@ -1,0 +1,105 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apihblabsco
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: apihblabsco
+  template:
+    metadata:
+      labels:
+        app: apihblabsco
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: kubernetes.io/hostname
+                    operator: In
+                    values:
+                      - k3sco3
+
+      containers:
+        - name: apihblabsco
+          image: registry.gitlab.com/hblabs.co/cma/express:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+          resources:
+            limits:
+              memory: 256Mi
+              cpu: "0.2"
+            requests:
+              memory: 20Mi
+              cpu: "0.1"
+          env:
+            - name: PORT
+              value: "4000"
+            - name: MONGO_DB_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: mongodb-secret
+                  key: dbhost
+            - name: MONGO_DB_PORT
+              value: "27017"
+            - name: MONGO_INITDB_DATABASE
+              value: "hblabs"
+            - name: MONGO_INITDB_ROOT_USERNAME
+              value: "root"
+            - name: MONGO_INITDB_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mongodb-secret
+                  key: dbpassword
+          volumeMounts:
+            - name: apihblabsco-uploads-vol
+              mountPath: /app/uploads/photos
+      volumes:
+        - name: apihblabsco-uploads-vol
+          hostPath:
+            path: /home/ubuntu/api.hblabs.co/uploads/photos
+      imagePullSecrets:
+        - name: hblabsco-registry
+
+---
+# Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: apihblabsco-service
+spec:
+  selector:
+    app: apihblabsco
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 4000
+
+---
+# Ingress prod for api.hblabs.co
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: apihblabsco-ingress-prod
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-production"
+spec:
+  tls:
+    - hosts:
+        - api.hblabs.co
+      secretName: api.hblabs.co
+  rules:
+    - host: api.hblabs.co
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: apihblabsco-service
+                port:
+                  name: http

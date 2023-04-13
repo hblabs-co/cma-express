@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  cma-express-prod:
+    profiles:
+      - production
+    image: registry.gitlab.com/hblabs.co/cma/express
+    build:
+      context: .
+      target: production
+    x-bake:
+          pull: true
+          tags:
+            - registry.gitlab.com/hblabs.co/cma/express:latest
+          # https://github.com/docker-library/official-images#multiple-architectures
+          platforms:
+            - linux/arm64/v8
+            # - linux/arm64
+            # - linux/arm/v7
+            # - windows/amd64

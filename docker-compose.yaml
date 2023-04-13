@@ -1,0 +1,52 @@
+version: '3.7'
+services:
+
+  # NodeJS API with Express [https://api.hblabs.co]
+  express:
+    image: cma-express
+    profiles:
+      - development
+    build:
+      context: .
+      target: development
+    tty: true
+    container_name: cma-express
+    command: npm run start:dev
+    restart: always
+    env_file: .env   
+    environment:
+      # Change environment vars inside the .env file. here are defaults
+      - EXPRESS_PORT=${EXPRESS_PORT:-3000}
+    # depends_on:
+    #   - mongodb
+    # links:
+    #   - mongodb
+    ports:
+      - "${EXPRESS_PORT}:3000"
+    volumes:
+      - ./src:/app/src
+      - ./uploads:/app/uploads
+    networks:
+      - main-network
+
+  # this takes the .env file as default
+  express-prod:
+    restart: always
+    profiles:
+      - production
+    container_name: cma-express-prod
+    image: registry.gitlab.com/hblabs.co/cma/express
+    tty: true
+    env_file:
+      - .env
+    build:
+      context: .
+      target: production
+    ports:
+        - "4000:4000"
+
+
+networks:
+  main-network:
+    driver: bridge
+    name: main-network

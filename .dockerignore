@@ -1,0 +1,13 @@
+LICENSE
+README.md
+.cache
+.husky/
+.git
+.gitignore
+docker-compose.yaml
+*.docker-compose.yaml
+docker-compose*.yaml
+Dockerfile
+node_modules/
+.dockerignore
+deployment/

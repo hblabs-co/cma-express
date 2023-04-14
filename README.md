@@ -15,7 +15,17 @@
 
 ## Apply or delete deployment
 
-- create the secret for the mongodb dbpassword and dbhost. See Basic Resources
-- create the certificate for api.hblabs.co `kubectl apply -f deployment/certificate.yaml`
-- `kubectl apply -f deployment/deployment.yaml`
-- `kubectl delete -f deployment/deployment.yaml`
+Ensure
+
+- The cert-manager helm was installed
+- A secret clodflare api token was stored in namespace cert-manager
+- `ClusterIssuer` is running
+- The namespace hblabsco-cma exists
+- A Secret "registry" for the gitlab deloytoken was stored in namespace hblabsco-cma
+- mongodb secret for the mongodb dbpassword and dbhost. under `resources/credentials/hblabs.co/cma/mongodb.yaml`
+- create the local path `/home/ubuntu/api.hblabs.co/uploads/photos`
+
+Then run
+
+- `kubectl apply -f deployment` for applying certificate and deployment
+- `kubectl delete -f deployment` for deleting certificate and deployment

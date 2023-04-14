@@ -1,16 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hblabsco-express
+  name: express
+  namespace: hblabsco
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: hblabsco-express
+      app: express
   template:
     metadata:
       labels:
-        app: hblabsco-express
+        app: express
     spec:
       affinity:
         nodeAffinity:
@@ -23,7 +24,7 @@ spec:
                       - k3sco3
 
       containers:
-        - name: hblabsco-express
+        - name: express
           image: registry.gitlab.com/hblabs.co/cma/express:latest
           imagePullPolicy: Always
           ports:
@@ -33,7 +34,7 @@ spec:
               memory: 256Mi
               cpu: "0.2"
             requests:
-              memory: 20Mi
+              memory: 100Mi
               cpu: "0.1"
           env:
             - name: PORT
@@ -55,24 +56,25 @@ spec:
                   name: mongodb-secret
                   key: dbpassword
           volumeMounts:
-            - name: hblabsco-express-uploads-vol
+            - name: express-uploads-vol
               mountPath: /app/uploads/photos
       volumes:
-        - name: hblabsco-express-uploads-vol
+        - name: express-uploads-vol
           hostPath:
             path: /home/ubuntu/api.hblabs.co/uploads/photos
       imagePullSecrets:
-        - name: hblabsco-registry
+        - name: registry
 
 ---
 # Service
 apiVersion: v1
 kind: Service
 metadata:
-  name: hblabsco-express-service
+  name: express-service
+  namespace: hblabsco
 spec:
   selector:
-    app: hblabsco-express
+    app: express
   ports:
     - name: http
       protocol: TCP
@@ -84,7 +86,8 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: hblabsco-express-ingress-prod
+  name: express-ingress-prod
+  namespace: hblabsco
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-production"
 spec:
@@ -100,6 +103,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: hblabsco-express-service
+                name: express-service
                 port:
                   name: http

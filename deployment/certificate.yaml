@@ -3,9 +3,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: api.hblabs.co
-  # Namespace must be the same as the service
-  # which will be use the certificate
-  namespace: default
+  namespace: hblabsco
 spec:
   # name wich will be used to refer to this certificate from ingress
   secretName: api.hblabs.co

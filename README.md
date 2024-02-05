@@ -1,5 +1,7 @@
 # CMA Express
 
+The Content Management Node.js API, written in JavaScript with Express.js, facilitates user authentication through email and password login. Upon successful login, users receive a JWT token enabling interaction with the API. This API allows users to create, retrieve, and update books by their respective IDs. Additionally, the API supports the handling of image files. With the help of Multer, it can accept, store, delete, and provide metadata information for uploaded images.
+
 ## Development
 
 - Run locally `docker compose --profile development up`

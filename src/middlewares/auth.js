@@ -5,10 +5,12 @@ import jwt from 'jsonwebtoken'
 const SECRET_TOKEN = "PntYNo9rG9NpVn9QZjKQd3VAiv7JyxoC6G6Ld3G71TQyY2YnKf5pfGJZ9KqssBdfwxJX2NXiEqYJsBKAbOzYOKrWsPYQjQrargR8dAltoez1pmZsCcgP9WzaZRfqljkc"
 const MINUTE = 60
 
+// Dummy passwords. not used anywhere
 const admin = {
     "helmer@hblabs.co": "4MkiiqgEEZhkrACFdw94"
 }
 
+// Dummy passwords. not used anywhere
 const users = {
     "fernando@hblabs.co": "uPvT3MoTBBZK6ntmlAVP",
     "wilmer@hblabs.co": "oAw6hhUtkp4sX316wtl3"

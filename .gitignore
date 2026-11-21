@@ -1,3 +1,6 @@
 .DS_Store
 uploads/
 .env
+# Xcode per-user state
+xcuserdata/
+*.xcuserstate

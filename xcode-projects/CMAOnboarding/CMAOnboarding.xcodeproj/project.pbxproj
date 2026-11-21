@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF47839729F9AC4E00B47E88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47839629F9AC4E00B47E88 /* AppDelegate.swift */; };
+		CF47839B29F9AC4E00B47E88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47839A29F9AC4E00B47E88 /* ViewController.swift */; };
+		CF47839E29F9AC4E00B47E88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF47839C29F9AC4E00B47E88 /* Main.storyboard */; };
+		CF4783A029F9AC4F00B47E88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF47839F29F9AC4F00B47E88 /* Assets.xcassets */; };
+		CF4783AE29F9AF9000B47E88 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4783AD29F9AF9000B47E88 /* Welcome.storyboard */; };
+		CF4783B029F9BD2800B47E88 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4783AF29F9BD2800B47E88 /* WelcomeViewController.swift */; };
+		CF4783B229F9BD3800B47E88 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4783B129F9BD3800B47E88 /* LoginViewController.swift */; };
+		CF4783B429F9BD4E00B47E88 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4783B329F9BD4E00B47E88 /* RegisterViewController.swift */; };
+		CF4783B729F9C0F700B47E88 /* NotificationBannerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CF4783B629F9C0F700B47E88 /* NotificationBannerSwift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CF47839329F9AC4E00B47E88 /* CMAOnboarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CMAOnboarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF47839629F9AC4E00B47E88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF47839A29F9AC4E00B47E88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CF47839D29F9AC4E00B47E88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CF47839F29F9AC4F00B47E88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF4783A429F9AC4F00B47E88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF4783AD29F9AF9000B47E88 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		CF4783AF29F9BD2800B47E88 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		CF4783B129F9BD3800B47E88 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CF4783B329F9BD4E00B47E88 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF47839029F9AC4E00B47E88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF4783B729F9C0F700B47E88 /* NotificationBannerSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF47838A29F9AC4E00B47E88 = {
+			isa = PBXGroup;
+			children = (
+				CF47839529F9AC4E00B47E88 /* CMAOnboarding */,
+				CF47839429F9AC4E00B47E88 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF47839429F9AC4E00B47E88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF47839329F9AC4E00B47E88 /* CMAOnboarding.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF47839529F9AC4E00B47E88 /* CMAOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				CF4783AB29F9AF3500B47E88 /* Modules */,
+				CF4783AA29F9AF2300B47E88 /* Commons */,
+				CF4783A429F9AC4F00B47E88 /* Info.plist */,
+			);
+			path = CMAOnboarding;
+			sourceTree = "<group>";
+		};
+		CF4783AA29F9AF2300B47E88 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				CF47839629F9AC4E00B47E88 /* AppDelegate.swift */,
+				CF47839A29F9AC4E00B47E88 /* ViewController.swift */,
+				CF47839C29F9AC4E00B47E88 /* Main.storyboard */,
+				CF47839F29F9AC4F00B47E88 /* Assets.xcassets */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		CF4783AB29F9AF3500B47E88 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CF4783AC29F9AF7600B47E88 /* Welcome */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CF4783AC29F9AF7600B47E88 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				CF4783AD29F9AF9000B47E88 /* Welcome.storyboard */,
+				CF4783AF29F9BD2800B47E88 /* WelcomeViewController.swift */,
+				CF4783B129F9BD3800B47E88 /* LoginViewController.swift */,
+				CF4783B329F9BD4E00B47E88 /* RegisterViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF47839229F9AC4E00B47E88 /* CMAOnboarding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF4783A729F9AC4F00B47E88 /* Build configuration list for PBXNativeTarget "CMAOnboarding" */;
+			buildPhases = (
+				CF47838F29F9AC4E00B47E88 /* Sources */,
+				CF47839029F9AC4E00B47E88 /* Frameworks */,
+				CF47839129F9AC4E00B47E88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CMAOnboarding;
+			packageProductDependencies = (
+				CF4783B629F9C0F700B47E88 /* NotificationBannerSwift */,
+			);
+			productName = CMAOnboarding;
+			productReference = CF47839329F9AC4E00B47E88 /* CMAOnboarding.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF47838B29F9AC4E00B47E88 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					CF47839229F9AC4E00B47E88 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = CF47838E29F9AC4E00B47E88 /* Build configuration list for PBXProject "CMAOnboarding" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF47838A29F9AC4E00B47E88;
+			packageReferences = (
+				CF4783B529F9C0F700B47E88 /* XCRemoteSwiftPackageReference "NotificationBanner" */,
+			);
+			productRefGroup = CF47839429F9AC4E00B47E88 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF47839229F9AC4E00B47E88 /* CMAOnboarding */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF47839129F9AC4E00B47E88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF4783A029F9AC4F00B47E88 /* Assets.xcassets in Resources */,
+				CF47839E29F9AC4E00B47E88 /* Main.storyboard in Resources */,
+				CF4783AE29F9AF9000B47E88 /* Welcome.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF47838F29F9AC4E00B47E88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF4783B229F9BD3800B47E88 /* LoginViewController.swift in Sources */,
+				CF4783B429F9BD4E00B47E88 /* RegisterViewController.swift in Sources */,
+				CF4783B029F9BD2800B47E88 /* WelcomeViewController.swift in Sources */,
+				CF47839B29F9AC4E00B47E88 /* ViewController.swift in Sources */,
+				CF47839729F9AC4E00B47E88 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CF47839C29F9AC4E00B47E88 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF47839D29F9AC4E00B47E88 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF4783A529F9AC4F00B47E88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF4783A629F9AC4F00B47E88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF4783A829F9AC4F00B47E88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CMAOnboarding/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = Welcome.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = Welcome;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.barcos.CMAOnboarding;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CF4783A929F9AC4F00B47E88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CMAOnboarding/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = Welcome.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = Welcome;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.barcos.CMAOnboarding;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF47838E29F9AC4E00B47E88 /* Build configuration list for PBXProject "CMAOnboarding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF4783A529F9AC4F00B47E88 /* Debug */,
+				CF4783A629F9AC4F00B47E88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF4783A729F9AC4F00B47E88 /* Build configuration list for PBXNativeTarget "CMAOnboarding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF4783A829F9AC4F00B47E88 /* Debug */,
+				CF4783A929F9AC4F00B47E88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF4783B529F9C0F700B47E88 /* XCRemoteSwiftPackageReference "NotificationBanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Daltron/NotificationBanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF4783B629F9C0F700B47E88 /* NotificationBannerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF4783B529F9C0F700B47E88 /* XCRemoteSwiftPackageReference "NotificationBanner" */;
+			productName = NotificationBannerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CF47838B29F9AC4E00B47E88 /* Project object */;
+}
